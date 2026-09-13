@@ -82167,7 +82167,7 @@ async function node_utils_fetchData(url) {
 class NodeFilterFactory extends BaseFilterFactory {}
 class NodeCanvasFactory extends BaseCanvasFactory {
   _createCanvas(width, height) {
-    const require = process.getBuiltinModule("module").createRequire("file:///workspaces/KMP/app/node_modules/pdfjs-dist/build/pdf.mjs");
+    const require = process.getBuiltinModule("module").createRequire("file:///home/runner/work/KMP/KMP/app/node_modules/pdfjs-dist/build/pdf.mjs");
     const canvas = require("@napi-rs/canvas");
     return canvas.createCanvas(width, height);
   }
@@ -86814,7 +86814,7 @@ function getReadableStream(readStream) {
   if (typeof Readable.toWeb === "function") {
     return Readable.toWeb(readStream);
   }
-  const require = process.getBuiltinModule("module").createRequire("file:///workspaces/KMP/app/node_modules/pdfjs-dist/build/pdf.mjs");
+  const require = process.getBuiltinModule("module").createRequire("file:///home/runner/work/KMP/KMP/app/node_modules/pdfjs-dist/build/pdf.mjs");
   const polyfill = require("node-readable-to-web-readable-stream");
   return polyfill.makeDefaultReadableStreamFromNodeReadable(readStream);
 }
